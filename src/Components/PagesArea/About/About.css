@@ -1,0 +1,99 @@
+.About {
+    margin-top: 70px;
+	text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+.About > .top {
+    width: 80%; /* Full width for responsiveness */
+    max-width: 900px; /* Set a max width */
+    display: flex;
+    flex-direction: column; /* Default column direction for small screens */
+    gap: 20px; /* Reduced gap for small screens */
+    align-items: center;
+}
+
+.About > .top > .img-card > img {
+    width: 100%;
+    max-width: 300px; 
+    border: 2px solid;
+    border-radius: 100%;
+    position: relative;
+}
+
+.About > .top > .img-card {
+    width: 100%;
+    max-height: 420px;
+    max-width: 300px;
+    padding: 3px;
+    padding-right: 6px;
+    border-radius: 100%;
+    background-image:  conic-gradient(from var(--angle),transparent 40%, blue, #622569, red, transparent);
+    animation: 3s spin linear infinite;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.About > .top > div {
+    text-align: center; /* Center text for smaller screens */
+    width: 100%;
+}
+
+.About > .bottom {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center; /* Centers the icons */
+    gap: 15px;
+}
+
+.About > .bottom > img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.About > .bottom > img:hover {
+    transform: scale(1.2);
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .About > .top {
+        flex-direction: row; /* Row layout for larger screens */
+        gap: 60px; /* Restore the gap for larger screens */
+    }
+
+    .About > .top > div {
+        text-align: left; /* Align text to the left for larger screens */
+        /* margin-top: 30px; */
+    }
+
+    .About > .bottom > img {
+        width: 70px; /* Increase icon size for larger screens */
+        height: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .About {
+        margin-top: 100px;
+    }
+}

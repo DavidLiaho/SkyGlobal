@@ -1,0 +1,22 @@
+.Forecast > .container > * {
+    width: 300px;
+	border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    display: inline-block;
+    margin: 10px;
+    background-image: linear-gradient(rgb(250, 235, 217), bisque);
+    transition: all 0.3s ease-out;
+}
+
+.Forecast > .container > *:hover {
+    transform: scale(1.02);
+}
+
+.Forecast > .container > div > table {
+    width: 100%;
+}
+
+.Forecast td {
+    padding: 20px;
+}

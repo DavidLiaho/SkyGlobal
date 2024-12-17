@@ -1,0 +1,13 @@
+.Layout {
+    height: 100%;
+	display: grid;
+    grid-template-rows: 15% 10% 75%;
+}
+
+.Layout > main {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+.ContactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactUs > form {
+    background-image: linear-gradient(rgb(250, 235, 217), bisque);
+    margin-top: 70px;
+	border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ContactUs > form > * {
+    margin: 10px;
+}
